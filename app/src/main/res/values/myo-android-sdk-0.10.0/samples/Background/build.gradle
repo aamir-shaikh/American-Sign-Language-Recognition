@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "19.1.0"
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 18
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    repositories {
+        maven {
+            // this must point to the myorepository distributed with the Myo SDK
+            url '../../myorepository'
+        }
+    }
+
+    compile('com.thalmic:myosdk:0.10.0@aar')
+}
